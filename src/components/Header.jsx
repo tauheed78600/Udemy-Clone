@@ -19,6 +19,8 @@ function Header() {
     const [hoveredCategory, setHoveredCategory] = useState(false);
     const [hoveredSubCategory, setHoveredSubCategory] = useState(false);
 
+    const [teach, setTeach] = useState(false)
+
     const [openBusiness, setOpenBusiness] = useState(false)
     const [udemyBusiness, setUdemyBusiness] = useState(false)
 
@@ -133,7 +135,28 @@ function Header() {
                     )}
 
                 </div>
-                <span className='ml-7 mt-7 text-sm'>Teach on Udemy</span>
+                <div className="relative mt-6 cursor-pointer"
+                    onMouseEnter={() => setTeach(true)}
+                    onMouseLeave={() => {
+                        setTeach(false);
+                    }}>
+                        <span className='ml-7 mt-7 text-sm'>Teach on Udemy</span>
+
+                        {teach && (
+                        <div
+                            className="absolute top-full w-[350px] h-[170px] bg-white border border-gray-300 shadow-lg p-4 rounded-md z-30"
+                            onMouseLeave={() => setTeach(false)}
+                        >
+                            <div className='flex flex-col gap-5'>
+                                <p className='font-extrabold text-center'>Turn what you know into an opportunity and reach millions around the world.
+                                </p>
+                                <Button className='w-[300px] items-center text-xl'>Learn More</Button>
+                            </div>
+                        </div>
+                    )}
+
+                    </div>
+                
                 <span className='ml-7 mt-7 text-sm'>My Learning</span>
                 <span className='mt-6 ml-7 '><Heart /></span>
                 <span className='mt-6 ml-7 h-4'><ShoppingCart /></span>
