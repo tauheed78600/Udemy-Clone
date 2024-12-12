@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicsSlider from './TopicsCard';
+import TopicsSlider from './TopicsSlider';
 
 function NewMlCourses() {
 
@@ -14,7 +14,7 @@ function NewMlCourses() {
           totalDuration: 15,
           description:
             "A complete beginner’s guide to Machine Learning concepts, tools, and techniques using Python. Covers supervised and unsupervised learning, and real-world applications.\n\nLearn to use libraries like Scikit-learn and Pandas for building ML models.",
-          image: "https://via.placeholder.com/300x120?text=ML+Fundamentals+Python",
+          image: "mlFundamentals.png",
         },
         {
           name: "Deep Learning with TensorFlow 2.0",
@@ -26,7 +26,7 @@ function NewMlCourses() {
           totalDuration: 18,
           description:
             "Master deep learning using TensorFlow 2.0. Build neural networks, CNNs, RNNs, and GANs. Learn state-of-the-art techniques for image and text data.\n\nThis course includes hands-on projects to solidify your knowledge.",
-          image: "https://via.placeholder.com/300x120?text=Deep+Learning+TensorFlow",
+          image: "dlTens.png",
         },
         {
           name: "Reinforcement Learning for Beginners",
@@ -38,7 +38,7 @@ function NewMlCourses() {
           totalDuration: 12,
           description:
             "Dive into the world of reinforcement learning. Understand Q-learning, policy gradients, and value iteration. Learn to train intelligent agents for games and real-world tasks.\n\nIdeal for those starting with AI and RL concepts.",
-          image: "https://via.placeholder.com/300x120?text=Reinforcement+Learning",
+          image: "rlLearning.png",
         },
         {
           name: "Advanced Natural Language Processing with Transformers",
@@ -50,7 +50,7 @@ function NewMlCourses() {
           totalDuration: 20,
           description:
             "Learn cutting-edge NLP techniques using transformer models like BERT, GPT, and T5. Implement real-world applications like chatbots, sentiment analysis, and text summarization.\n\nThis course emphasizes hands-on coding with Hugging Face.",
-          image: "https://via.placeholder.com/300x120?text=Advanced+NLP+Transformers",
+          image: "nlpTra.png",
         },
         {
           name: "Data Science and Machine Learning Bootcamp",
@@ -62,7 +62,7 @@ function NewMlCourses() {
           totalDuration: 25,
           description:
             "An all-in-one bootcamp covering data science and machine learning. Topics include regression, classification, clustering, and deep learning.\n\nBuild projects in Python and learn to deploy models on cloud platforms.",
-          image: "https://via.placeholder.com/300x120?text=DS+ML+Bootcamp",
+          image: "dsml.png",
         },
         {
           name: "Explainable AI: Interpreting Machine Learning Models",
@@ -74,7 +74,7 @@ function NewMlCourses() {
           totalDuration: 10,
           description:
             "Understand explainability in machine learning models. Learn techniques like SHAP, LIME, and interpretability of tree-based models.\n\nThis course is perfect for those aiming to build ethical and transparent AI systems.",
-          image: "https://via.placeholder.com/300x120?text=Explainable+AI",
+          image: "explanAI.png",
         },
         {
           name: "Generative AI with Stable Diffusion and MidJourney",
@@ -86,7 +86,7 @@ function NewMlCourses() {
           totalDuration: 16,
           description:
             "Explore the fascinating world of generative AI. Build applications using Stable Diffusion, DALL-E, and MidJourney for image generation and creative AI tasks.\n\nA must-learn for those looking to work on next-gen AI tools.",
-          image: "https://via.placeholder.com/300x120?text=Generative+AI",
+          image: "stableDiff.png",
         },
       ];
 

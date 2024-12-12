@@ -11,10 +11,13 @@ import AICourses from './AICourses'
 import NodeJSCourses from './NodeJSCourses'
 import WebDevCourses from './WebDevCourses'
 import Footer from './Footer'
+import TopicsRecommended from './TopicsRecommended'
+import Header from './Header'
 
 function Homepage() {
   return (
-    <div className="min-h-screen overflow-auto flex flex-col bg-white">
+    <div>
+    <div className="flex flex-col bg-white mt-16">
       <div className='flex justify-start'>
       <div className='ml-[100px] h-16 w-16 border-2 rounded-full bg-black mt-8'>
         <p className='text-white p-3 text-2xl'>TD</p>
@@ -36,7 +39,9 @@ function Homepage() {
       <AICourses/>
       <NodeJSCourses/>
       <WebDevCourses/>
+      <TopicsRecommended/>
       <Footer/>
+    </div>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicsSlider from './TopicsCard';
+import TopicsSlider from './TopicsSlider';
 
 function LearnersView() {
 

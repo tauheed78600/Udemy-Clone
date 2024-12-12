@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicsSlider from './TopicsCard';
+import TopicsSlider from './TopicsSlider';
 
 function WebDevCourses() {
 
@@ -15,7 +15,7 @@ function WebDevCourses() {
           totalDuration: 50,
           description:
             "Learn everything you need to know about web development from front-end to back-end, including HTML, CSS, JavaScript, Node.js, React, and more.",
-          image: "https://via.placeholder.com/300x120?text=Web+Developer+Bootcamp",
+          image: "webDev.png",
         },
         {
           name: "Modern Web Development with React",
@@ -27,7 +27,7 @@ function WebDevCourses() {
           totalDuration: 35,
           description:
             "A comprehensive course on modern React development, covering hooks, context, routing, Redux, and building dynamic web applications.",
-          image: "https://via.placeholder.com/300x120?text=Modern+React+Development",
+          image: "webDev.png",
         },
         {
           name: "The Complete JavaScript Course 2024: From Zero to Expert",
@@ -39,7 +39,7 @@ function WebDevCourses() {
           totalDuration: 50,
           description:
             "Master JavaScript from basics to advanced concepts like ES6, OOP, and asynchronous JavaScript. Build real-world projects and gain a solid understanding of JavaScript.",
-          image: "https://via.placeholder.com/300x120?text=Complete+JavaScript+Course",
+          image: "jsTopPick.jpeg",
         },
         {
           name: "Build Responsive Real-World Websites with HTML and CSS",
@@ -51,7 +51,7 @@ function WebDevCourses() {
           totalDuration: 40,
           description:
             "Learn to build modern, responsive websites with HTML and CSS. Understand layout techniques like Flexbox and Grid, and build real-world projects.",
-          image: "https://via.placeholder.com/300x120?text=Responsive+Websites+with+HTML+CSS",
+          image: "webDev.png",
         },
         {
           name: "Web Development Bootcamp 2024",
@@ -63,7 +63,7 @@ function WebDevCourses() {
           totalDuration: 60,
           description:
             "This bootcamp covers everything from front-end to back-end, including HTML, CSS, JavaScript, Node.js, MongoDB, and more. Build full-stack applications.",
-          image: "https://via.placeholder.com/300x120?text=Web+Development+Bootcamp",
+          image: "webDev.png",
         },
         {
           name: "Advanced CSS and Sass: Flexbox, Grid, Animations",
@@ -75,7 +75,7 @@ function WebDevCourses() {
           totalDuration: 22,
           description:
             "Dive deep into advanced CSS concepts like Flexbox, Grid, and animations. Learn how to style modern, responsive websites with best practices.",
-          image: "https://via.placeholder.com/300x120?text=Advanced+CSS+Sass",
+          image: "mern.png",
         },
         {
           name: "The Complete React Developer Course",
@@ -87,7 +87,7 @@ function WebDevCourses() {
           totalDuration: 40,
           description:
             "Master React development by building real-world projects. Learn hooks, routing, Redux, and more while developing apps that scale.",
-          image: "https://via.placeholder.com/300x120?text=Complete+React+Developer+Course",
+          image: "reactRedux.png",
         },
         {
           name: "The Complete Web Developer in 2024: Zero to Mastery",
@@ -99,7 +99,7 @@ function WebDevCourses() {
           totalDuration: 45,
           description:
             "A comprehensive web development course that covers HTML, CSS, JavaScript, React, Node.js, and more. Build real-world projects and land your dream job.",
-          image: "https://via.placeholder.com/300x120?text=Complete+Web+Developer+Course",
+          image: "webDev.png",
         },
       ];
 

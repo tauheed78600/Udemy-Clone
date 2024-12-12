@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicsSlider from './TopicsCard';
+import TopicsSlider from './TopicsSlider';
 
 function ShortCourses() {
 
@@ -15,7 +15,7 @@ function ShortCourses() {
           totalDuration: 8,
           description:
             "Learn to create reusable and efficient custom React hooks for advanced functionality. This course dives deep into how React hooks work and how to build your own.\n\nBy the end of this course, you'll be able to simplify your React code and make your components more readable and maintainable.",
-          image: "https://via.placeholder.com/300x120?text=Custom+React+Hooks",
+          image: "reactImage.jpeg",
         },
         {
           name: "Redux Saga with React: A Comprehensive Guide",
@@ -27,7 +27,7 @@ function ShortCourses() {
           totalDuration: 12,
           description:
             "Master Redux Saga to handle complex state and side effects in React applications. This course covers advanced techniques to build scalable React projects.\n\nYou'll learn the power of generator functions, asynchronous programming, and middleware, enabling you to manage state in large applications.",
-          image: "https://via.placeholder.com/300x120?text=Redux+Saga+Course",
+          image: "reactRedux.png",
         },
         {
           name: "Learn Game Development with JavaScript",
@@ -39,7 +39,7 @@ function ShortCourses() {
           totalDuration: 14,
           description:
             "Learn how to build interactive 2D and 3D games using JavaScript. This course walks you through game physics, animations, and collision detection.\n\nWhether you're a beginner or experienced developer, you'll gain the skills to create games for browsers, desktop, or mobile platforms.",
-          image: "https://via.placeholder.com/300x120?text=Game+Development+with+JS",
+          image: "gameDev.png",
         },
         {
           name: "Node.js & Express.js: Integration and Unit Testing",
@@ -51,7 +51,7 @@ function ShortCourses() {
           totalDuration: 10,
           description:
             "Learn to write reliable and maintainable unit and integration tests for your Node.js and Express.js applications. This course covers testing frameworks like Jest and Mocha.\n\nYou'll gain confidence in deploying error-free applications with robust testing strategies and automation tools.",
-          image: "https://via.placeholder.com/300x120?text=Node+JS+Testing",
+          image: "mern.png",
         },
         {
           name: "Mastering React Hooks: React Hooks for Web Development",
@@ -63,7 +63,7 @@ function ShortCourses() {
           totalDuration: 9,
           description:
             "Master React Hooks and take your web development skills to the next level. This course explores advanced hooks, performance optimization, and state management.\n\nYou'll build real-world projects and learn how to write reusable, clean, and efficient React code.",
-          image: "https://via.placeholder.com/300x120?text=Mastering+React+Hooks",
+          image: "reactRedux.png",
         },
         {
           name: "Redux and Redux Toolkit in React (Crash Course)",
@@ -75,7 +75,7 @@ function ShortCourses() {
           totalDuration: 6,
           description:
             "Learn Redux and Redux Toolkit with React in this fast-paced crash course. Understand state management and implement it in your React applications.\n\nBy the end, you'll have a solid understanding of Redux concepts, including slices, reducers, and middleware.",
-          image: "https://via.placeholder.com/300x120?text=Redux+Toolkit+Course",
+          image: "reactRedux.png",
         },
         {
           name: "JavaScript Web Animations with Greensock (GSAP) 2024",
@@ -87,7 +87,7 @@ function ShortCourses() {
           totalDuration: 10,
           description:
             "Create stunning web animations with Greensock (GSAP) in this comprehensive course. Learn animation basics, advanced techniques, and practical applications.\n\nYou'll be able to create dynamic and engaging user interfaces with animation libraries that make your websites stand out.",
-          image: "https://via.placeholder.com/300x120?text=GSAP+Course",
+          image: "jsTopPick.jpeg",
         },
         {
           name: "Node.js Cluster with PM2, RabbitMQ, Redis, and Nginx",
@@ -99,7 +99,7 @@ function ShortCourses() {
           totalDuration: 13,
           description:
             "Learn to build scalable and high-performance Node.js applications using clustering, PM2, RabbitMQ, Redis, and Nginx. This course focuses on distributed systems.\n\nYou'll master advanced deployment strategies and techniques to handle high traffic and ensure fault tolerance.",
-          image: "https://via.placeholder.com/300x120?text=Node+JS+Cluster",
+          image: "mern.png",
         },
       ];
 

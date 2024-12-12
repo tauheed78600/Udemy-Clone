@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicsSlider from './TopicsCard';
+import TopicsSlider from './TopicsSlider';
 
 function NodeJSCourses() {
 
@@ -15,7 +15,7 @@ function NodeJSCourses() {
           totalDuration: 34,
           description:
             "Learn Node.js from scratch, covering Express.js, MongoDB, and REST APIs. This course includes real-world projects such as creating a complete e-commerce app and a task manager.",
-          image: "https://via.placeholder.com/300x120?text=Complete+Node+Developer+Course",
+          image: "mern.png",
         },
         {
           name: "Node.js, Express, MongoDB & More: The Complete Bootcamp",
@@ -27,7 +27,7 @@ function NodeJSCourses() {
           totalDuration: 45,
           description:
             "A deep dive into backend development with Node.js, Express, and MongoDB. Learn how to build scalable REST APIs, manage data with MongoDB, and deploy apps with Heroku.",
-          image: "https://via.placeholder.com/300x120?text=Node+Express+MongoDB+Bootcamp",
+          image: "mern.png",
         },
         {
           name: "Learn Node.js From Scratch",
@@ -39,7 +39,7 @@ function NodeJSCourses() {
           totalDuration: 20,
           description:
             "Start from the basics of Node.js and progress to build real-world applications. The course covers asynchronous programming, HTTP, and file system modules.",
-          image: "https://via.placeholder.com/300x120?text=Learn+Node+JS+From+Scratch",
+          image: "mern.png",
         },
         {
           name: "Building Scalable Web Apps with Node.js",
@@ -51,7 +51,7 @@ function NodeJSCourses() {
           totalDuration: 30,
           description:
             "Learn how to build highly scalable web applications using Node.js, including implementing authentication, handling user requests, and managing databases.",
-          image: "https://via.placeholder.com/300x120?text=Scalable+Web+Apps+with+Node+JS",
+          image: "mern.png",
         },
         {
           name: "Mastering Node.js",
@@ -63,7 +63,7 @@ function NodeJSCourses() {
           totalDuration: 25,
           description:
             "Become a Node.js expert. Learn asynchronous programming, building APIs with Express, and interacting with databases like MongoDB. Great for aspiring backend developers.",
-          image: "https://via.placeholder.com/300x120?text=Mastering+Node+JS",
+          image: "mern.png",
         },
         {
           name: "Node.js & Express - Full Course",
@@ -75,7 +75,7 @@ function NodeJSCourses() {
           totalDuration: 15,
           description:
             "Learn the essentials of Node.js and Express.js. This course will help you build your first RESTful API and understand routing, middleware, and more.",
-          image: "https://via.placeholder.com/300x120?text=Node+JS+Express+Course",
+          image: "mern.png",
         },
         {
           name: "Node.js for Beginners",
@@ -87,7 +87,7 @@ function NodeJSCourses() {
           totalDuration: 18,
           description:
             "An introductory course to Node.js, focusing on building simple web apps, learning the basics of HTTP, and managing asynchronous operations.",
-          image: "https://via.placeholder.com/300x120?text=Node+JS+for+Beginners",
+          image: "mern.png",
         },
         {
           name: "Complete Guide to Node.js",
@@ -99,7 +99,7 @@ function NodeJSCourses() {
           totalDuration: 40,
           description:
             "This complete guide covers Node.js and its ecosystem. Learn how to create RESTful APIs, handle authentication, work with databases, and deploy your Node.js applications.",
-          image: "https://via.placeholder.com/300x120?text=Complete+Guide+to+Node+JS",
+          image: "mern.png",
         },
       ];
 

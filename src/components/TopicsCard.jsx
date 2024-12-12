@@ -1,11 +1,14 @@
 import React, { useState, useRef } from 'react';
 import { Button } from './ui/button';
-import { Heart, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 function TopicsCard({ course }) {
     const [hover, setHover] = useState(false);
     const [hoverPosition, setHoverPosition] = useState('right');
     const cardRef = useRef(null);
+
+    const navigate = useNavigate(); // Corrected variable name (was `Navigate` before)
 
     const handleMouseEnter = () => {
         setHover(true);
@@ -26,12 +29,18 @@ function TopicsCard({ course }) {
         setHover(false);
     };
 
+    const handleClick = () => {
+        // Navigate to the '/coursecontent' route when the card is clicked
+        navigate('/coursecontent');
+    };
+
     return (
         <div
             ref={cardRef}
-            className="relative flex-shrink-0 w-[250px] h-[260px]  p-2"
+            className="relative flex-shrink-0 w-[250px] h-[260px] p-2"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={handleClick} // Handles card click to redirect to '/coursecontent'
         >
             <img
                 className="h-[120px] w-full object-cover"
@@ -56,7 +65,7 @@ function TopicsCard({ course }) {
             {hover && (
                 <div
                     className={`absolute top-0 ${
-                        hoverPosition === 'right' ? 'left-[300px]' : '-left-[350px]'
+                        hoverPosition === 'right' ? 'left-[250px]' : '-left-[350px]'
                     } w-[350px] h-[430px] bg-white border border-gray-300 shadow-xl p-4 z-30`}
                 >
                     <b className="font-extrabold text-lg">{course.name}</b>
@@ -84,50 +93,4 @@ function TopicsCard({ course }) {
     );
 }
 
-function TopicsSlider({ course1 }) {
-    const sliderRef = useRef(null);
-
-    const scrollLeft = () => {
-        if (sliderRef.current) {
-            sliderRef.current.scrollBy({ left: -310, behavior: 'smooth' });
-        }
-    };
-
-    const scrollRight = () => {
-        if (sliderRef.current) {
-            sliderRef.current.scrollBy({ left: 310, behavior: 'smooth' });
-        }
-    };
-
-    return (
-        <div className="relative w-full">
-            <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10">
-                <button
-                    onClick={scrollLeft}
-                    className="bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300"
-                >
-                    <ChevronLeft className="h-6 w-6" />
-                </button>
-            </div>
-            <div className="absolute top-1/2 right-2 transform -translate-y-1/2 z-10">
-                <button
-                    onClick={scrollRight}
-                    className="bg-gray-200 p-2 rounded-full shadow hover:bg-gray-300"
-                >
-                    <ChevronRight className="h-6 w-6" />
-                </button>
-            </div>
-            <div
-                ref={sliderRef}
-                className="flex overflow-x-auto gap-4 p-4 h-[500px] scrollbar-hidden"
-            >
-                {course1.map((course, index) => (
-                    <TopicsCard key={index} course={course} />
-                ))}
-            </div>
-        </div>
-    );
-}
-
-export default TopicsSlider;
-
+export default TopicsCard;
