@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 import { Heart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -37,7 +37,7 @@ function TopicsCard({ course }) {
     return (
         <div
             ref={cardRef}
-            className="relative flex-shrink-0 w-[250px] h-[260px] p-2"
+            className="relative flex-shrink-0 w-[250px] h-[260px] p-2 "
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={handleClick} // Handles card click to redirect to '/coursecontent'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from './ui/button'
+import { Button } from '../ui/button'
 
 function HomeBelow1() {
     return (
@@ -15,10 +15,10 @@ function HomeBelow1() {
                 </div>
                 
                 <div className='mt-8'>
-                    <div className='flex justify-start gap-4'>
-                    <div className='border-2 h-[152px] w-[500px] border-black'>
-                    <div className='grid grid-cols-[36%_64%]'>
-                        <div>
+                    <div className='flex justify-start gap-6'>
+                    <div className='border-2 h-[152px] w-[500px] border-black hover:scale-105 transition-transform duration-300 ease-in-out'>
+                    <div className='grid grid-cols-[36%_64%] '>
+                        <div className=''>
                         <img className='h-[150px] w-[180px]' src='reactImage.jpeg'></img>
                         </div>
                         <div>
@@ -35,7 +35,7 @@ function HomeBelow1() {
                     
                     </div>
 
-                    <div className='border-2 h-[152px] w-[500px] border-black'>
+                    <div className='border-2 h-[152px] w-[500px] border-black hover:scale-105 transition-transform duration-300 ease-in-out'>
                     <div className='grid grid-cols-[36%_64%]'>
                         <div>
                         <img className='h-[150px] w-[180px]' src='reactImage.jpeg'></img>

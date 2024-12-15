@@ -5,9 +5,9 @@ function ProfileComponent() {
     return (
         <div>
             <div className='absolute top-full right-1 w-[310px] h-[740px] bg-white border border-gray-300 shadow-lg p-4 rounded-md z-30'>
-                <div className='flex justify-between'>
-                    <div className='border-2 h-16 w-16 mr-7 border-black rounded-full bg-black'>
-                        <p className='text-white p-3 text-2xl'>TD</p>
+                <div className='flex justify-around'>
+                    <div className='border-2 h-16 w-16 border-black rounded-full bg-black'>
+                        <p className='text-white p-3 text-2xl ml-1'>TD</p>
                     </div>
                     <div>
                         <p className='font-extrabold text-xl mr-4'>Tauheed Darekar</p>

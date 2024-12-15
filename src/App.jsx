@@ -1,23 +1,24 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importing React Router components
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import CourseContent from './components/CourseContent'; // Assuming you will create a CourseContent component
-import Homepage from './components/Homepage';
+import Header from './components/Header/Header.jsx';
+import CourseContent from './components/CoursePage/CourseContent';
+import Homepage from './components/Homepage/Homepage.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div>
-      {/* <Header /> */}
     
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<Homepage />} /> {/* Home route */}
-        <Route path="/coursecontent" element={<CourseContent />} /> {/* CourseContent route */}
+        <Route path="/" element={<Homepage />} />
+        <Route path="/coursecontent" element={<CourseContent />} />
       </Routes>
+      <Footer/>
     </Router>
     </div>
   );

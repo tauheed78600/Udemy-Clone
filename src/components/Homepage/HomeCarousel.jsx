@@ -1,12 +1,12 @@
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 
 function HomeCarousel() {
     return (
         <div className='flex justify-center items-center mt-10'>
-            <div className='w-4/5'>
+            <div className='w-[1325px]'>
                 <Carousel showArrows={true} infiniteLoop={true} autoPlay={true} showThumbs={false}>
                     <div className='relative'>
                         <img src="slide1.png" className='h-[400px] object-cover' />

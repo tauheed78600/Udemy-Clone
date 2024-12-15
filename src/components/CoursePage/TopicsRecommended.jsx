@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicSlider from './TopicSlider'
+import TopicSlider from '../Homepage/TopicSlider'
 
 function TopicsRecommended() {
 

@@ -1,18 +1,20 @@
 import React from 'react'
-import HomeCarousel from './HomeCarousel'
+// import HomeCarousel from './HomeCarousel.jsx'
+import HomeCarousel from './HomeCarousel.jsx'
 import HomeBelow1 from './HomeBelow1'
 import LearnNext from './LearnNext'
 import TopPicks from './TopPicks'
 import LearnersView from './LearnersView'
-import Ratings from './Ratings'
+// import Ratings from './CoursePage/Ratings'
+import Ratings from '../CoursePage/Ratings.jsx'
 import ShortCourses from './ShortCourses'
 import NewMlCourses from './NewMlCourses'
 import AICourses from './AICourses'
 import NodeJSCourses from './NodeJSCourses'
 import WebDevCourses from './WebDevCourses'
-import Footer from './Footer'
-import TopicsRecommended from './TopicsRecommended'
-import Header from './Header'
+// import Footer from './Footer'
+import TopicsRecommended from '../CoursePage/TopicsRecommended'
+// import Header from './Header'
 
 function Homepage() {
   return (
@@ -40,7 +42,6 @@ function Homepage() {
       <NodeJSCourses/>
       <WebDevCourses/>
       <TopicsRecommended/>
-      <Footer/>
     </div>
     </div>
   )

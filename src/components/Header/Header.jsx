@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Input } from '../components/ui/input.jsx';
-import { Button } from '../components/ui/button.jsx'
+import { Input } from '../ui/input.jsx';
+import { Button } from '../ui/button.jsx'
 import { Heart, ShoppingCart, Bell, Search} from 'lucide-react';
-import Sections1 from './Sections1.jsx';
-import ProfileComponent from './ProfileComponent.jsx';
-import Homepage from './Homepage.jsx';
+import Sections1 from '../CoursePage/Sections1.jsx';
+import ProfileComponent from '../Homepage/ProfileComponent.jsx'
+import Homepage from '../Homepage/Homepage.jsx'
 import SubHeader from './SubHeader.jsx';
 import { useLocation } from 'react-router-dom';
 
@@ -28,19 +28,6 @@ function Header() {
     const [cart, setCart] = useState(false)
     const [notification, setNotification] = useState(false)
     const [profile, setProfile] = useState(false)
-
-    const [development, setDevelopment] = useState(false)
-    const [business, setBusiness] = useState(false)
-    const [finance, setFinance] = useState(false)
-    const [it, setIt] = useState(false)
-    const [office, setOffice] = useState(false)
-    const [personalDev, setPersonalDev] = useState(false)
-    const [design, setDesign] = useState(false)
-    const [health, setHealth] = useState(false)
-    const[market, setMarket] = useState(false)
-    const [music, setMusic] = useState(false)
-
-
 
     console.log(openDialog)
     const categories = {
@@ -101,7 +88,7 @@ function Header() {
                     {hoveredCategory && (
                         <div
                             className="absolute top-full left-[200px] w-[200px] h-[500px] bg-white border border-gray-300 shadow-lg p-4 rounded-md z-20"
-                            onMouseLeave={() => setHoveredCategory(false)}
+                            // onMouseLeave={() => setHoveredCategory(false)}
                         >
                             {categories[hoveredCategory].map((subCategory) => (
                                 <div
@@ -145,7 +132,7 @@ function Header() {
 
                     {openBusiness && (
                         <div
-                            className="absolute right-1 top-full w-[350px] h-[150px] bg-white border border-gray-300 shadow-lg p-4 rounded-md z-30"
+                            className="absolute right-1 top-full w-[350px] h-[140px] bg-white border border-gray-300 shadow-lg p-4 rounded-md z-30"
                             onMouseLeave={() => setOpenBusiness(false)}
                         >
                             <div className='flex flex-col gap-5'>
@@ -165,7 +152,7 @@ function Header() {
 
                     {teach && (
                         <div
-                            className="absolute top-full right-1 w-[350px] h-[170px] bg-white border border-gray-300 shadow-lg p-4 rounded-md z-30"
+                            className="absolute top-full right-1 w-[350px] h-[140px] bg-white border border-gray-300 shadow-lg p-4 rounded-md z-30"
                             onMouseLeave={() => setTeach(false)}
                         >
                             <div className='flex flex-col gap-5'>

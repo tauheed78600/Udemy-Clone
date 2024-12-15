@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Sections1 from './Sections1';
+import Sections1 from '../CoursePage/Sections1';
 
 function SubHeader() {
 
@@ -106,7 +106,7 @@ function SubHeader() {
     return (
         <div className="border-b-2 h-[60px] mt-2">
             <div className="h-full flex items-center justify-center gap-2 text-sm shadow-lg">
-                <div className="relative ml-5 cursor-pointer"
+                <div className="relative mt-10 h-[60px] ml-5 cursor-pointer "
                     onMouseEnter={() => setDevelopment(true)}
                     onMouseLeave={() => {
                         setDevelopment(false);
@@ -118,7 +118,7 @@ function SubHeader() {
 
 
                 </div>
-                <div className="relative ml-5 cursor-pointer"
+                <div className="mt-10 h-[60px] relative ml-5 cursor-pointer"
                     onMouseEnter={() => setBusiness(true)}
                     onMouseLeave={() => {
                         setBusiness(false);
@@ -133,7 +133,7 @@ function SubHeader() {
 
 
                 </div>
-                <div className="relative ml-5 cursor-pointer"
+                <div className="mt-10 h-[60px] relative ml-5 cursor-pointer"
                     onMouseEnter={() => setFinance(true)}
                     onMouseLeave={() => {
                         setFinance(false);
@@ -145,7 +145,7 @@ function SubHeader() {
                     )}
                 </div>
 
-                <div className="relative ml-5 cursor-pointer"
+                <div className="mt-10 h-[60px] relative ml-5 cursor-pointer"
                     onMouseEnter={() => setIt(true)}
                     onMouseLeave={() => {
                         setIt(false);
@@ -157,7 +157,7 @@ function SubHeader() {
                     )}
                 </div>
 
-                <div className="relative ml-5 cursor-pointer"
+                <div className="mt-10 h-[60px] relative ml-5 cursor-pointer"
                     onMouseEnter={() => setOffice(true)}
                     onMouseLeave={() => {
                         setOffice(false);
@@ -169,7 +169,7 @@ function SubHeader() {
                     )}
                 </div>
 
-                <div className="relative ml-5 cursor-pointer"
+                <div className="mt-10 h-[60px] relative ml-5 cursor-pointer"
                     onMouseEnter={() => setPersonalDev(true)}
                     onMouseLeave={() => {
                         setPersonalDev(false);
@@ -181,7 +181,7 @@ function SubHeader() {
                     )}
                 </div>
 
-                <div className="relative ml-5 cursor-pointer"
+                <div className="mt-10 h-[60px] relative ml-5 cursor-pointer"
                     onMouseEnter={() => setDesign(true)}
                     onMouseLeave={() => {
                         setDesign(false);
@@ -192,7 +192,7 @@ function SubHeader() {
                         <Sections1 topics={designTopics} />
                     )}
                 </div>
-                <div className="relative ml-5 cursor-pointer"
+                <div className="mt-10 h-[60px] relative ml-5 cursor-pointer"
                     onMouseEnter={() => setMarket(true)}
                     onMouseLeave={() => {
                         setMarket(false);
@@ -205,7 +205,7 @@ function SubHeader() {
                 </div>
 
 
-                <div className="relative ml-5 cursor-pointer"
+                <div className="mt-10 h-[60px] relative ml-5 cursor-pointer"
                     onMouseEnter={() => setHealth(true)}
                     onMouseLeave={() => {
                         setHealth(false);
@@ -216,7 +216,7 @@ function SubHeader() {
                         <Sections1 topics={healthTopics} />
                     )}
                 </div>
-                <div className="relative ml-5 cursor-pointer"
+                <div className="mt-10 h-[60px] relative ml-5 cursor-pointer"
                     onMouseEnter={() => setMusic(true)}
                     onMouseLeave={() => {
                         setMusic(false);

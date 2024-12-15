@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicsSlider from './TopicsSlider';
+import TopicsSlider from '../Homepage/TopicsSlider';
 
 function Ratings() {
 
