@@ -1,8 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react';
 import TopicsSlider from './TopicsSlider';
-
+import LoadingSkeleton from './LoadingSkeleton';
 
 function AICourses() {
+    const [isLoading, setIsLoading] = useState(true);
+    const aiCoursesRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && isLoading) {
+                    const timer = setTimeout(() => {
+                        setIsLoading(false);
+                    }, 5000);
+                    return () => clearTimeout(timer);
+                }
+            },
+            { threshold: 0 }
+        );
+
+        if (aiCoursesRef.current) {
+            observer.observe(aiCoursesRef.current);
+        }
+
+        return () => {
+            if (aiCoursesRef.current) {
+                observer.unobserve(aiCoursesRef.current);
+            }
+        };
+    }, [isLoading]);
 
     const courses = [
         {
@@ -103,17 +129,22 @@ function AICourses() {
         },
     ];
 
-
     return (
-        <div className='ml-[100px]'>
-            <div>
-                <p className='text-3xl font-extrabold '>Featured courses in Artificial Intelligence (AI)</p>
+        <div className='lg:ml-[100px] ml-4' ref={aiCoursesRef}>
+            {isLoading ? (
+                <LoadingSkeleton />
+            ) : (
                 <div>
-                    <TopicsSlider course1={courses} />
+                    <div>
+                        <p className='text-3xl font-extrabold '>Featured courses in Artificial Intelligence (AI)</p>
+                        <div>
+                            <TopicsSlider course1={courses} />
+                        </div>
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
-    )
+    );
 }
 
-export default AICourses
+export default AICourses;

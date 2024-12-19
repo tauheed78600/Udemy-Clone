@@ -18,14 +18,14 @@ import TopicsRecommended from '../CoursePage/TopicsRecommended'
 
 function Homepage() {
   return (
-    <div>
-    <div className="flex flex-col bg-white mt-16">
+    <div className=''>
+    <div className="flex flex-col bg-white lg:mt-2">
       <div className='flex justify-start'>
-      <div className='ml-[100px] h-16 w-16 border-2 rounded-full bg-black mt-8'>
+      <div className='lg:ml-[100px] h-16 w-16 border-2 ml-2 rounded-full bg-black mt-8'>
         <p className='text-white p-3 text-2xl'>TD</p>
       </div>
       <div>
-        <p className='mt-8 ml-4 font-extrabold text-2xl'>Welcome Back, Tauheed</p>
+        <p className='mt-8 ml-4 font-extrabold text-2xl md:flex items-center'>Welcome Back, Tauheed</p>
         <p className='ml-4 mt-3 text-violet-900 font-bold underline underline-offset-1 text-sm'>Add Occupation and Interests</p>
       </div>
       </div>

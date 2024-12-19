@@ -166,3 +166,11 @@ button:focus-visible {
     @apply bg-background text-foreground;
   }
 }
+@media(max-width:640px){
+  .bussiness{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

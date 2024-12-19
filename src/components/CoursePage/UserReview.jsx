@@ -4,13 +4,13 @@ import StartRating from './StartRating'
 
 function UserReview() {
     return (
-        <div className='mt-8 w-[730px]'>
-            <div className='flex gap-2'>
+        <div className='mt-8 w-[90%]'>
+            <div className='flex gap-2 w-[90%]'>
                 <Star className='mt-1' />
                 <p className='text-2xl font-extrabold'>4.6 Course Rating .  72k ratings</p>
             </div>
-            <div className='grid grid-cols-2 gap-8 mt-4'>
-                <div className='border border-t-black border-b-black border-white mb-4 p-3 hover:scale-105 transition-transform duration-300 ease-in-out '>
+            <div className='grid lg:grid-cols-2 grid-cols-1 gap-8 mt-4'>
+                <div className='border border-t-black border-b-black border-white mb-4 p-3 '>
                     <div className='flex'>
                         <div className='h-12 w-12 border bg-black text-white p-3 rounded-full'>
                             <p className='font-semibold'>AR</p>
@@ -41,7 +41,7 @@ function UserReview() {
                     </div>
                     </div>
                 </div>
-                <div className='border hover:scale-105 transition-transform duration-300 ease-in-out  border-t-black border-b-black border-white mb-4 p-3'>
+                <div className='border  border-t-black border-b-black border-white mb-4 p-3'>
                 <div className='flex'>
                         <div className='h-12 w-12 border bg-black text-white p-3 rounded-full'>
                             <p className='font-semibold'>KO</p>
@@ -72,13 +72,13 @@ function UserReview() {
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-2 gap-8 mt-4'>
-                <div className='border border-t-black hover:scale-105 transition-transform duration-300 ease-in-out  border-b-black border-white mb-4 p-3'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 gap-8 mt-4'>
+                <div className='border border-t-black  border-b-black border-white mb-4 p-3'>
                     <div className='flex'>
                         <div className='h-12 w-12 border bg-black text-white p-3 rounded-full'>
                             <p className='font-semibold'>FM</p>
                         </div>
-                        <div className="flex flex-col w-[400px]">
+                        <div className="flex flex-col w-[90%]">
                             <div className="flex items-center justify-between">
                                 <p className="font-extrabold ml-2">Felipe de Oliveira M.</p>
                                 <EllipsisVertical />
@@ -104,7 +104,7 @@ function UserReview() {
                     </div>
                     </div>
                 </div>
-                <div className='border border-t-black hover:scale-105 transition-transform duration-300 ease-in-out  border-b-black border-white mb-4 p-3'>
+                <div className='border border-t-black border-b-black border-white mb-4 p-3'>
                 <div className='flex'>
                         <div className='h-12 w-14 border bg-black text-white p-3 rounded-full'>
                             <p className='font-semibold ml-1'>TI</p>

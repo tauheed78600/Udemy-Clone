@@ -3,10 +3,10 @@ import React from 'react'
 
 function TopPicks() {
     return (
-        <div className='ml-[100px] mt-9'>
-            <div className='border-2  h-[270px] w-[1280px]'>
-                <div className='grid grid-cols-[40%_60%] p-3'>
-                    <img src="jsTopPick.jpeg" className='mt-4 h-[220px] w-[480px]'></img>
+        <div className='lg:ml-[100px] ml-2 mt-20'>
+            <div className='border-2 lg:h-[270px] lg:w-[1280px] max-w-[95%]'>
+                <div className='lg:grid lg:grid-cols-[40%_60%] gap-3 p-3'>
+                    <img src="jsTopPick.jpeg" className='mt-2 lg:h-[220px] lg:w-[480px] w-full'></img>
                     <div>
                         <b className='text-3xl mt-4'>The Complete JavaScript Course 2025: From Zero to Expert</b>
                         <div>

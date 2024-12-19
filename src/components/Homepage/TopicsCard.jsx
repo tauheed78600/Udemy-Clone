@@ -8,7 +8,7 @@ function TopicsCard({ course }) {
     const [hoverPosition, setHoverPosition] = useState('right');
     const cardRef = useRef(null);
 
-    const navigate = useNavigate(); // Corrected variable name (was `Navigate` before)
+    const navigate = useNavigate();
 
     const handleMouseEnter = () => {
         setHover(true);
@@ -30,7 +30,6 @@ function TopicsCard({ course }) {
     };
 
     const handleClick = () => {
-        // Navigate to the '/coursecontent' route when the card is clicked
         navigate('/coursecontent');
     };
 
@@ -40,7 +39,7 @@ function TopicsCard({ course }) {
             className="relative flex-shrink-0 w-[250px] h-[260px] p-2 "
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            onClick={handleClick} // Handles card click to redirect to '/coursecontent'
+            onClick={handleClick}
         >
             <img
                 className="h-[120px] w-full object-cover"
@@ -64,10 +63,10 @@ function TopicsCard({ course }) {
 
             {hover && (
                 <div
-                    className={`absolute top-0 ${
-                        hoverPosition === 'right' ? 'left-[250px]' : '-left-[350px]'
-                    } w-[350px] h-[430px] bg-white border border-gray-300 shadow-xl p-4 z-30`}
-                >
+                className={`absolute top-0 ${
+                  hover ? 'left-[250px] hidden lg:block' : '-left-[350px] hidden'
+                } w-[350px] h-auto bg-white border border-gray-300 shadow-xl p-4 z-30`}
+              >
                     <b className="font-extrabold text-lg">{course.name}</b>
                     <div className="flex justify-start gap-3">
                         <div className="border-2 h-[20px] w-[70px] bg-yellow-200">

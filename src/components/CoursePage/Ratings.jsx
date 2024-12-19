@@ -1,7 +1,35 @@
-import React from 'react'
+import React, {useEffect, useState, useRef} from 'react'
 import TopicsSlider from '../Homepage/TopicsSlider';
+import LoadingSkeleton from '../Homepage/LoadingSkeleton';
 
 function Ratings() {
+
+  const [isLoading, setIsLoading] = useState(true);
+  const ratingsRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting && isLoading) {
+                const timer = setTimeout(() => {
+                    setIsLoading(false);
+                }, 5000);
+                return () => clearTimeout(timer);
+            }
+        },
+        { threshold: 0 }
+    );
+
+    if (ratingsRef.current) {
+        observer.observe(ratingsRef.current);
+    }
+
+    return () => {
+        if (ratingsRef.current) {
+            observer.unobserve(ratingsRef.current);
+        }
+    };
+}, [isLoading]);
 
 
     const courses = [
@@ -80,16 +108,22 @@ function Ratings() {
       ];
 
 
-  return (
-    <div className='ml-[100px]'>
-      <div>
-        <p className='text-3xl font-extrabold '>Recommended to you based on ratings</p>
-        <div>
-        <TopicsSlider course1={courses}/>
+      return (
+        <div className='lg:ml-[100px] ml-4' ref={ratingsRef}>
+            {isLoading ? (
+                <LoadingSkeleton />
+            ) : (
+                <div>
+                    <div>
+                        <p className='text-3xl font-extrabold '>Recommended to you based on ratings</p>
+                        <div>
+                            <TopicsSlider course1={courses} />
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
-      </div>
-    </div>
-  )
+    );
 }
 
 export default Ratings

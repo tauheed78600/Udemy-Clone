@@ -27,16 +27,14 @@ function CourseBuyCard() {
     ];
 
 
-    // Prevent background scroll when the popup is open
     useEffect(() => {
         if (showPopup) {
-            document.body.style.overflow = "hidden"; // Disable background scrolling
+            document.body.style.overflow = "hidden";
         } else {
-            document.body.style.overflow = "auto"; // Re-enable background scrolling
+            document.body.style.overflow = "auto";
         }
-
         return () => {
-            document.body.style.overflow = "auto"; // Cleanup on unmount
+            document.body.style.overflow = "auto";
         };
     }, [showPopup]);
 
@@ -46,12 +44,10 @@ function CourseBuyCard() {
 
     return (
         <div>
-            {/* Card Container */}
             <div
                 className={`mt-9 w-[350px] border shadow-lg bg-white text-black ${toggle ? "h-[900px]" : "h-[610px]"
                     } overflow-hidden`}
             >
-                {/* Image Section */}
                 <div className="h-[180px] border-1">
                     <div className="relative" onClick={handlePopup}>
                         <img
@@ -67,7 +63,6 @@ function CourseBuyCard() {
                     </div>
                 </div>
 
-                {/* Sticky Toggle */}
                 <div className="h-[30px] sticky top-0 bg-white z-10">
                     <div className="flex justify-around mt-3 font-extrabold">
                         <p onClick={() => setToggle(true)} className="mb-4 cursor-pointer">
@@ -79,7 +74,6 @@ function CourseBuyCard() {
                     </div>
                     <hr />
 
-                    {/* Content Section */}
                     {toggle ? (
                         <div className="p-5">
                             <p className="text-2xl font-extrabold">
@@ -151,10 +145,8 @@ function CourseBuyCard() {
                 </div>
             </div>
 
-            {/* Popup */}
             {showPopup && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-                    {/* Popup Content */}
                     <div
                         className=" text-black w-[650px] bg-black max-h-[1200px] h-[90%] overflow-y-auto scrollbar-hidden p-5 rounded-lg shadow-lg"
                         onClick={(e) => e.stopPropagation()}
@@ -170,7 +162,7 @@ function CourseBuyCard() {
                             <p className="mt-2 font-extrabold">The Complete Node.js Developer Course (3rd Edition)</p>
                             <div className='border border-white h-[1590px] bg-gray-600'>
                                 <iframe
-                                    width="594"
+                                    width="607"
                                     height="330"
                                     src={`https://www.youtube.com/embed/${youtubeId}`}
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -181,12 +173,12 @@ function CourseBuyCard() {
                                     <p>Free Sample Videos</p>
                                 </div>
                                 {youtubeIds.map((youtube, idx) => (
-                                    <div onClick={() => setYoutubeId(youtube.youtubeId)} className="border h-[80px] w-[570px] border-gray-600 hover:bg-gray-950 flex flex-col gap-3 ml-3">
+                                    <div onClick={() => setYoutubeId(youtube.youtubeId)} className="border h-[80px] w-[590px] border-gray-600 hover:bg-gray-950 flex flex-col gap-3 ml-3">
                                         <div className="flex flex-row">
                                             <img src='reactRedux.png' className="h-[80px]"></img>
-                                            <p className="font-extrabold w-[370px] ml-2">{youtube.name}</p>
+                                            <p className="font-extrabold w-[400px] ml-2">{youtube.name}</p>
                                             <div className="">
-                                                <p className="flex justify-end">{youtube.duration}</p>
+                                                <p className="flex justify-end text-sm font-extrabold">{youtube.duration}</p>
                                             </div>
                                         </div>
                                     </div>

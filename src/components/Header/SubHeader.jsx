@@ -104,7 +104,7 @@ function SubHeader() {
 
 
     return (
-        <div className="border-b-2 h-[60px] mt-2">
+        <div className="border-b-2 h-[60px] mt-2 hidden lg:block">
             <div className="h-full flex items-center justify-center gap-2 text-sm shadow-lg">
                 <div className="relative mt-10 h-[60px] ml-5 cursor-pointer "
                     onMouseEnter={() => setDevelopment(true)}

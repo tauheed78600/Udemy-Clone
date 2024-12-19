@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { CircleAlert, Globe, Keyboard, AlarmClock, Heart, Check } from 'lucide-react'
+import { CircleAlert, Globe, Keyboard, AlarmClock, Heart, Check, Play } from 'lucide-react'
 import StartRating from './StartRating'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import CourseOverview from './CourseOverview'
 import CourseBuyCard from './CourseBuyCard'
 import SubHeader2 from './SubHeader2'
+import Popup from './Popup'
+import { use } from 'react'
 
 function CourseContent() {
 
@@ -15,7 +17,8 @@ function CourseContent() {
     const [showCard, setShowCard] = useState(false)
     const [subHeader, setSubHeader] = useState(false)
     const [isSticky, setIsSticky] = useState(true);
-
+    const [popup, setPopup] = useState(false)
+    const [youtubeId, setYoutubeId] = useState('AZzV3wZCvI4')
 
     const blackDivRef = useRef(null);
 
@@ -63,14 +66,140 @@ function CourseContent() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const youtubeIds = [
+        { name: "Introduction to Node.js", youtubeId: "AZzV3wZCvI4", duration: "10:15" },
+        { name: "Installing Node.js and Setting Up", youtubeId: "sqTH6_xjhBY", duration: "12:30" },
+        { name: "Understanding the Event Loop", youtubeId: "nNihy9kZmIU", duration: "15:45" },
+        { name: "Building Your First Node.js App", youtubeId: "9HYAaXwS7I4", duration: "18:20" },
+        { name: "Using Node.js Modules", youtubeId: "u2CKVFcvaxA", duration: "14:10" },
+        { name: "Working with File System (FS)", youtubeId: "Pk9J0SvNXUs", duration: "13:05" },
+        { name: "Creating and Managing Servers", youtubeId: "Y-hNztFGOXo", duration: "20:00" },
+        { name: "Working with HTTP Requests", youtubeId: "gG47rm_vg8M", duration: "16:45" },
+        { name: "Asynchronous Programming in Node.js", youtubeId: "J-QgmSzyA_A", duration: "19:30" },
+        { name: "Understanding Streams and Buffers", youtubeId: "uY4cMWoZFMs", duration: "17:40" },
+        { name: "Working with Databases in Node.js", youtubeId: "GNTDLqKWknw", duration: "22:15" },
+        { name: "Using Middleware in Node.js", youtubeId: "WaObzvMEgd4", duration: "13:55" },
+        { name: "Building a REST API with Node.js", youtubeId: "N3rkdpBjmH8", duration: "25:30" },
+        { name: "Deploying Node.js Applications", youtubeId: "qbHmaHjOKPE", duration: "18:00" },
+        { name: "Node.js Best Practices and Tips", youtubeId: "68UFRuVyim8", duration: "15:20" }
+    ];
+
+    const handlePopup = () => {
+        setPopup(!popup)
+    }
 
     return (
         <div className=''>
+            <Popup />
             {subHeader ? <SubHeader2 /> : null}
-            <div className='w-full h-[400px] bg-black text-white' ref={blackDivRef}>
-                <div className='grid grid-cols-[60%_40%] gap-24 h-[400px] ml-[200px] w-[1200px] p-3'>
+            <div
+                className="w-[350px] md:w-[750px] lg:w-auto h-auto lg:h-[375px] lg:bg-black text-black lg:text-white"
+                ref={blackDivRef}
+            >
+                {/* Mobile UI */}
+                <div className='lg:hidden '>
+                    <div className='mt-4 flex justify-start ml-4 flex-col'>
+                        <p className='text-sm lg:text-violet-300 text-violet-700 font-extrabold'>Development &gt; Programming Languages &gt; Nodejs</p>
+                        <div
+                            className="relative mt-4 h-full"
+                            onClick={handlePopup}
+                        >
+                            <img
+                                src="mern.png"
+                                alt="Image description"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center w-full">
+                                <div className="p-5 shadow-2xl bg-white rounded-full">
+                                    <Play className="text-black text-4xl" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className='w-full'>
+                            <p className='text-3xl mt-6 font-extrabold'>The Complete Node.js Developer Course (3rd Edition)</p>
+                            <p className='mt-5'>Learn Node.js by building real-world applications with Node JS, Express, MongoDB, Jest, and more!</p>
+                            <p className='bg-yellow-300 w-[80px]'>Bestseller</p>
+                            <p className='text-yellow-500 mt-6 font-extrabold flex items-center'>
+                                4.6
+                                <StartRating />
+                                <span className='text-sm ml-2 text-violet-700 underline underline-offset-1'>(72984 Ratings)</span>
+                                <span className='text-sm text-white ml-3'>306,120 students</span>
+                            </p>
+                            <div>
+                                <p className='mt-3 text-sm font-semibold'>Created By<span className='text-sm ml-2 text-violet-700 underline underline-offset-1'>Andrew Mead, Rob Percival</span></p>
+                            </div>
+                            <div className='flex flex-col gap-2 mt-2 '>
+                                <div className='flex flex-row gap-2'>
+                                    <CircleAlert />
+                                    <p className=''>Last Updated 03/2021</p>
+                                </div>
+                                <div className='flex gap-1'>
+                                    <Globe className='h-5' />
+                                    <p className='text-sm'>English</p>
+                                </div>
+                                <div className='flex gap-1'>
+                                    <Keyboard className='h-5' />
+                                    <p>English [CC], Arabic [Auto], <span className='text-sm ml-2 text-violet-700 underline underline-offset-1'>11 more</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {popup && (
+                        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+                            <div
+                                className=" text-black w-[500px] bg-black max-h-[1200px] h-[90%] overflow-y-auto scrollbar-hidden p-5 rounded-lg shadow-lg"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <div className="flex justify-end">
+                                    <Button
+                                        className='bg-black h-7 text-white font-extrabold '
+                                        onClick={handlePopup}
+                                    >X</Button>
+                                </div>
+                                <div className="text-white">
+                                    <p className="text-sm font-extrabold">Course Preview</p>
+                                    <p className="mt-2 font-extrabold">The Complete Node.js Developer Course (3rd Edition)</p>
+                                    <div className='border border-white h-auto bg-gray-600'>
+                                        <iframe
+                                            className='h-[250px] md:w-full w-[330px]'
+                                            src={`https://www.youtube.com/embed/${youtubeId}`}
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                            title="Embedded youtube"
+                                        />
+                                        <div className="text-white p-3 font-extrabold">
+                                            <p>Free Sample Videos</p>
+                                        </div>
+                                        {youtubeIds.map((youtube, idx) => (
+                                            <div onClick={() => setYoutubeId(youtube.youtubeId)} className="border h-[80px] w-[300px] border-gray-600 hover:bg-gray-950 flex flex-col gap-3 ml-3">
+                                                <div className="flex flex-row w-[330px]">
+                                                    <img src='reactRedux.png' className="h-[80px]"></img>
+                                                    <div>
+                                                        <p className="font-extrabold ml-2">{youtube.name}</p>
+                                                    </div>
+                                                    <div className="">
+                                                        <p className="flex justify-end text-sm font-extrabold">{youtube.duration}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+
+
+                </div>
+
+                {/*Laptop UI */}
+                <div className='hidden lg:grid grid-cols-[60%_40%] gap-24 h-auto lg:ml-[200px] lg:w-[1200px] p-3'>
                     <div className='mt-7 h-[400px]'>
-                        <p className='text-sm text-violet-300 font-extrabold'>Development &gt; Programming Languages &gt; Nodejs</p>
+                        <p className='text-sm lg:text-violet-300 text-violet-700 font-extrabold'>Development &gt; Programming Languages &gt; Nodejs</p>
                         <p className='text-3xl mt-6 font-extrabold'>The Complete Node.js Developer Course (3rd Edition)</p>
                         <p className='mt-5'>Learn Node.js by building real-world applications with Node JS, Express, MongoDB, Jest, and more!</p>
                         <p className='text-yellow-500 mt-6 font-extrabold flex items-center'>
@@ -96,20 +225,17 @@ function CourseContent() {
                         </div>
                     </div>
 
-                    {/* The Right Card */}
                     {showCard && isSticky ?
                         <div>
                             <div className='h-[60px] fixed left-[1011px] top-[4px] w-[350px] bg-white z-10 text-black border'>
                                 <div className='flex justify-around font-extrabold mt-4'>
                                     <div>
-                                        <p onClick={() => setToggle(true)} >Personal</p>
+                                        <p onClick={() => setToggle(true)}>Personal</p>
                                     </div>
                                     <div>
                                         <p onClick={() => setToggle(false)}>Teams</p>
                                     </div>
                                 </div>
-
-                                {/* <hr className='' /> */}
 
                                 {toggle ?
                                     <div className='p-5 border-2 shadow-xl mt-4'>
@@ -117,7 +243,7 @@ function CourseContent() {
                                             <p className='text-2xl font-extrabold'>$29.99 <del className='text-sm text-gray-600'>$59.99</del><span className='text-gray-600 text-sm'>  84% off</span></p>
                                         </div>
                                         <div className='mt-3'>
-                                            <p className='text-red-600 flex items-center gap-1 text-sm'><AlarmClock className='h-5 b' /><span className='font-bold'>1 day </span>left at this price!</p>
+                                            <p className='text-red-600 flex items-center gap-1 text-sm'><AlarmClock className='h-5' /><span className='font-bold'>1 day </span>left at this price!</p>
                                         </div>
                                         <div className='mt-3 flex items-center gap-3'>
                                             <Button className='rounded-none hover:scale-105 transition-transform duration-300 ease-in-out  w-[240px] h-[50px] bg-violet-600 hover:bg-violet-800'>Add to Cart</Button>
@@ -174,10 +300,10 @@ function CourseContent() {
                                 }
                             </div>
                         </div>
-
                         : <CourseBuyCard />}
                 </div>
             </div>
+
             <div className='bg-white '>
                 <CourseOverview />
             </div>

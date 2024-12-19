@@ -1,8 +1,35 @@
-import React from 'react'
+import React, {useEffect, useState, useRef} from 'react'
+import LoadingSkeleton from './LoadingSkeleton';
 import TopicsSlider from './TopicsSlider';
 
 function ShortCourses() {
 
+  const [isLoading, setIsLoading] = useState(true);
+  const shortRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting && isLoading) {
+                const timer = setTimeout(() => {
+                    setIsLoading(false);
+                }, 5000);
+                return () => clearTimeout(timer);
+            }
+        },
+        { threshold: 0 }
+    );
+
+    if (shortRef.current) {
+        observer.observe(shortRef.current);
+    }
+
+    return () => {
+        if (shortRef.current) {
+            observer.unobserve(shortRef.current);
+        }
+    };
+}, [isLoading]);
 
     const courses = [
         {
@@ -105,11 +132,16 @@ function ShortCourses() {
 
 
   return (
-    <div className='ml-[100px]'>
-      <p className='text-3xl font-extrabold '>Short and sweet courses for you</p>
+    <div className='lg:ml-[100px] ml-4' ref={shortRef}>
+      {isLoading ? (
+                <LoadingSkeleton />
+            ) : (
+      <div>
+        <p className='text-3xl font-extrabold '>Short and sweet courses for you</p>
       <div>
         <TopicsSlider course1={courses}/>
         </div>
+      </div>)}
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { ThumbsUp, ThumbsDown } from 'lucide-react'
 function FeaturedReview() {
     return (
         <div className='mt-7'>
-            <div className="border h-[360px] w-[730px] p-4 flex flex-col hover:scale-105 transition-transform duration-300 ease-in-out ">
+            <div className="border lg:h-[360px] h-auto lg:w-[730px] w-[90%] p-4 flex flex-col hover:scale-105 transition-transform duration-300 ease-in-out ">
                 <p className='text-2xl font-extrabold'>Featured review</p>
                 <div className="flex flex-col mt-2">
                     <div className="flex items-center">

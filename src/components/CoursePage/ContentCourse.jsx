@@ -40,16 +40,16 @@ function ContentCourse() {
     }
 
     return (
-        <div className="mt-6 w-[730px]">
+        <div className="mt-6 w-[90%]">
             <div className="text-2xl font-extrabold ">
                 <p className=''>Course content</p>
                 <div className='flex justify-between'>
                     <p className="text-xs text-gray-800 mt-6 mb-1">
                         18 sections. 177 lectures. 35h 3m total length
                     </p>
-                    <p onClick={openAllSections} className='text-violet-900 text-sm mt-5 cursor-pointer'>{open ? 'Collapse' : 'Expand'} all sections</p>
+                    <p onClick={openAllSections} className='text-violet-900 mr-20 text-sm mt-5 cursor-pointer'>{open ? 'Collapse' : 'Expand'} all sections</p>
                 </div>
-                <div className="border border-gray-200 w-[730px]">
+                <div className="border border-gray-200 lg:w-[730px] w-full">
                     {courseSections.map((sect, idx) => (
                         <div key={idx}>
                             <div
@@ -80,14 +80,14 @@ function ContentCourse() {
                     ))}
                 </div>
             </div>
-            <div className='mt-7 text-2xl'>
+            <div className='mt-7 text-2xl lg:w-full w-[90%]'>
                 <p className='font-extrabold '>Requirements</p>
                 <ul className='text-sm mt-4 flex flex-col list-disc ml-4 gap-2'>
-                    <li>A computer on which you can install software (Windows, MacOS, or Linux)</li>
+                    <li className=''>A computer on which you can install software (Windows, MacOS, or Linux)</li>
                     <li>A basic understanding of JavaScript (variables, functions, objects, arrays, if statements)</li>
                 </ul>
             </div>
-            <div className='mt-7 text-2xl'>
+            <div className='mt-7 text-2xl lg:w-full w-[90%]'>
                 <p className='font-extrabold '>Description</p>
                 <div className='text-sm mt-4 flex flex-col gap-2'>
                     <p className='text-sm'>Have you tried to learn Node before? You start a new course, and the instructor has you installing a bunch of libraries before you even know what Node is or how it works. You eventually get stuck and reach out to the instructor, but you get no reply. You then close the course and never open it again.</p>

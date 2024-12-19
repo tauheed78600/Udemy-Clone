@@ -25,7 +25,7 @@ function TopicsRecommended() {
     ]
 
   return (
-    <div className='ml-[100px]'>
+    <div className='lg:ml-[100px] ml-2'>
       <p className='font-extrabold text-2xl mb-3'>Topics recommended for you</p>
       <div>
         <TopicSlider courses = {courses}/>
