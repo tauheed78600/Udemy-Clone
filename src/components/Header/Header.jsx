@@ -49,7 +49,7 @@ function Header() {
         "Database Design and Development": ["Normal Forms", "ACID Properties", "Concurrency"],
         "Software Testing": ["Selenium", "Manual Testing", "Unit Testing", "Automation Testing"]
     };
-    
+
 
     const subCategoryCertifications = [
         {
@@ -90,110 +90,118 @@ function Header() {
 
 
     const location = useLocation()
-    console.log("params line 150", location)
 
     return (
         <div>
             <div className="border-b-2 h-[75px] w-full shadow-lg">
 
                 {/*Mobile Sidebar */}
-                <div className="flex items-center justify-between h-full px-4 lg:hidden">
+                <div className="flex justify-between h-full px-4 lg:hidden">
+        <div className="flex items-center">
+          <span onClick={() => setShowSidebar(!showSidebar)}>
+            <Menu className="h-10 cursor-pointer" />
+          </span>
+        </div>
 
-                    <div className="flex items-center">
-                        <span className="hamburger-icon" onClick={() => setShowSidebar(!showSidebar)}>
-                            <Menu className="h-10" />
-                        </span>
-                    </div>
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <img
+            src="/udemyBG1.png"
+            onClick={() => window.location.reload()}
+            className="h-[80px] w-[120px] object-contain"
+            alt="Logo"
+          />
+        </div>
 
-                    <div className="absolute left-1/2 transform -translate-x-1/2">
-                        <img src="/udemyBG1.png" onClick={()=>window.location.reload()} className="h-[80px] w-[120px] object-contain" alt="Logo" />
-                    </div>
+        <div className="flex items-center gap-4">
+          <Search className="h-6 cursor-pointer" />
+          <ShoppingCart className="h-6 cursor-pointer" />
+        </div>
+      </div>
 
-                    <div className="flex items-center gap-4">
-                        <Search className="h-6 cursor-pointer" />
-                        <ShoppingCart className="h-6 cursor-pointer" /></div>
+      {showSidebar && (
+        <div className="fixed left-0 top-0 h-full w-[300px] bg-white shadow-lg z-40 overflow-y-auto transition-all duration-300">
+          <div className="items-start flex bg-gray-200 h-[130px]">
+            <div className="ml-4 h-16 w-16 border-2 rounded-full bg-black mt-8 flex flex-col items-center justify-center">
+              <p className="text-white text-2xl">TD</p>
+            </div>
+            <div className="mt-10 ml-4">
+              <p className="font-extrabold text-xl">Hi, Tauheed Darekar</p>
+              <p className="text-sm text-gray-700">Welcome back</p>
+            </div>
+            <button
+              className="text-gray-500 bg-gray-200 ml-auto mr-4"
+              onClick={() => setShowSidebar(false)}
+            >
+              X
+            </button>
+          </div>
 
-
-                    {showSidebar && (
-                        <div>
-
-                            <div className="fixed left-0 top-0 w-[300px] h-full bg-white shadow-lg z-40 md:w-[768px]">
-                                <div className='items-start flex bg-gray-200 h-[130px]'>
-                                    <div className='ml-4 h-16 w-20 border-2 rounded-full bg-black mt-8 flex flex-col items-center justify-center'>
-                                        <p className='text-white text-2xl'>TD</p>
-                                    </div>
-
-                                    <div className='mt-10 ml-4'>
-
-                                        <p className='font-extrabold text-xl'>Hi, Tauheed Darekar</p>
-                                        <p className='text-sm text-gray-700'>Welcome back</p>
-                                    </div>
-                                    <button className="text-gray-500 bg-gray-200" onClick={() => setShowSidebar(false)}>
-                                        X
-                                    </button>
-                                </div>
-                                <div className="p-4">
-                                    <div className='flex flex-col gap-3 text-sm'>
-                                        <p className='text-gray-700'>Learn</p>
-                                        <p>My Learning</p>
-                                    </div>
-                                    <hr className='mt-3' />
-                                    <div className='mt-4 text-sm'>
-                                        <p>Certification Preparation</p>
-                                    </div>
-                                    <hr className='mt-3' />
-                                    <p className="text-gray-800 font-bold mt-1">Explore</p>
-                                    <div>
-                                        <p className='text-sm font-extrabold text-gray-600 mt-2'>Most Popular</p>
-                                        {Object.keys(subCategoryCertifications).map((category, idx) => (
-                                            <div key={category} className="mt-4">
-                                                <p
-                                                    className="cursor-pointer text-sm"
-                                                    onClick={() => setActiveCategory(category)}
-                                                >
-                                                    {subCategoryCertifications[category].name}
-                                                </p>
-                                                {activeCategory === category && (
-                                                    <ul className="ml-4">
-                                                        {categories[category].map((subCategory) => (
-                                                            <li
-                                                                key={subCategory}
-                                                                className="cursor-pointer text-sm mt-2"
-                                                                onClick={() => setActiveSubCategory(subCategory)}
-                                                            >
-                                                                {subCategory}
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                )}
-                                            </div>
-                                        ))}
-                                        <div className='mt-4'>
-                                            <p className='text-sm text-gray-600 font-extrabold'>More from Udemy</p>
-                                            <div className='text-sm mt-3 flex flex-col gap-3'>
-                                                <p>Udemy Business</p>
-                                                <p>Get the App</p>
-                                                <p>Invite Friends</p>
-                                                <p>Help and Support</p>
-                                            </div>
-                                            <div className='flex items-center gap-2 border border-black mt-4 h-14 w-28'>
-                                                <Globe className='h-5' />
-                                                <p>English</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
+          <div className="p-4">
+            <div className="flex flex-col gap-3 text-sm">
+              <p className="text-gray-700">Learn</p>
+              <p>My Learning</p>
+            </div>
+            <hr className="mt-3" />
+            <div className="mt-4 text-sm">
+              <p>Certification Preparation</p>
+            </div>
+            <hr className="mt-3" />
+            <p className="text-gray-800 font-bold mt-1">Explore</p>
+            <div>
+              <p className="text-sm font-extrabold text-gray-600 mt-2">
+                Most Popular
+              </p>
+              {Object.keys(subCategoryCertifications).map((category) => (
+                <div key={category} className="mt-4">
+                  <p
+                    className="cursor-pointer text-sm"
+                    onClick={() => setActiveCategory(category)}
+                  >
+                    {subCategoryCertifications[category].name}
+                  </p>
+                  {activeCategory === category && (
+                    <ul className="ml-4">
+                      {categories[category].map((subCategory) => (
+                        <li
+                          key={subCategory}
+                          className="cursor-pointer text-sm mt-2"
+                          onClick={() => setActiveSubCategory(subCategory)}
+                        >
+                          {subCategory}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
+              ))}
+              <div className="mt-4">
+                <p className="text-sm text-gray-600 font-extrabold">
+                  More from Udemy
+                </p>
+                <div className="text-sm mt-3 flex flex-col gap-3">
+                  <p>Udemy Business</p>
+                  <p>Get the App</p>
+                  <p>Invite Friends</p>
+                  <p>Help and Support</p>
+                </div>
+                <div className="flex items-center gap-2 border border-black mt-4 h-14 w-28">
+                  <Globe className="h-5" />
+                  <p>English</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+
 
 
 
 
                 <div className="hidden md:flex flex-row gap-4">
                     <div className='hidden lg:block'>
-                        <img onClick={()=>window.location.reload()} src='udemyBG.png' className='h-20 hidden md:block'></img>
+                        <img onClick={() => window.location.reload()} src='udemyBG.png' className='h-20 hidden md:block cursor-pointer'></img>
                     </div>
                     <div
                         className="relative cursor-pointer hidden lg:block xl:block"

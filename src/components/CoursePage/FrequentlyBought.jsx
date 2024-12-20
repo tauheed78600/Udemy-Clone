@@ -42,7 +42,7 @@ function FrequentlyBought() {
                         </div>
                         <div className='flex justify-between'>
                             <p className='font-extrabold mt-4'>Total ₹10,997/-</p>
-                            <Button className='rounded-none bg-violet-800 text-white w-[150px] h-[50px] font-extrabold hover:scale-105 transition-transform duration-300 ease-in-out '>Add All to Cart</Button>
+                            <Button className='rounded-none bg-violet-800 text-white w-[150px] h-[50px] font-extrabold'>Add All to Cart</Button>
                         </div>
                     </div>
                 </div>

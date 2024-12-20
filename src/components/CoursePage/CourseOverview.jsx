@@ -5,22 +5,25 @@ import ContentCourse from './ContentCourse'
 
 function CourseOverview() {
     return (
-        <div className='lg:ml-[200px] lg:w-[730px] ml-6 w-[90%]'>
-            <div className='border-2 mt-8 px-4 hover:scale-105 transition-transform duration-300 ease-in-out'>
-                <div className="lg:h-[215px] lg:flex lg:items-center lg:justify-between flex flex-col items-center"> {/* Main container */}
-                    <p className='text-2xl font-extrabold w-full text-center lg:w-72 lg:text-left mb-4 lg:mb-0'>What You'll Learn</p> {/* Heading */}
-                    <div className='flex flex-col lg:flex-row lg:gap-20 w-full lg:w-auto'>
-                        <div className='text-sm flex flex-col gap-3 w-full lg:w-auto mb-4 lg:mb-0 items-center lg:items-start'> {/* First Column */}
+        <div
+        className={`ml-6 w-[90%] ${
+          window.innerWidth >= 1024 ? 'lg:ml-[200px] lg:w-[730px]' : 'lg:w-full'
+        }`}
+      >      
+            <div className='border-2 lg:w-[90%] mt-8 px-4 hover:scale-105 transition-transform duration-300 ease-in-out'>
+                <div className="lg:h-[215px] lg:flex lg:items-center lg:justify-between flex flex-col items-center">
+                    <p className='text-2xl font-extrabold w-full text-center lg:w-72 lg:text-left mb-4 lg:mb-0'>What You'll Learn</p> 
+                    <div className='flex flex-col lg:flex-row lg:gap-20 md:w-auto md:flex-col w-full lg:w-auto'>
+                        <div className='text-sm flex flex-col gap-3 w-full lg:w-auto mb-4 lg:mb-0 items-center lg:items-start'> 
                             <p className='flex items-center gap-2'><Check />Completely refilmed for 3rd edition</p>
                             <p className='flex items-center gap-2'><Check />Create Express web servers and APIs</p>
                             <p className='flex items-center gap-2'><Check />Use cutting-edge ES6/ES7 JavaScript</p>
                             <p className='flex items-center gap-2'><Check />Create real-time web apps with SocketIO</p>
                         </div>
-                        <div className='text-sm flex flex-col gap-3 w-full lg:w-auto items-center lg:items-start'> {/* Second Column */}
+                        <div className='text-sm flex flex-col gap-3 w-full lg:w-auto items-center lg:items-start'>
                             <p className='flex items-center gap-2'><Check />Build, test, and launch Node apps</p>
                             <p className='flex items-center gap-2'><Check />Store data with Mongoose and MongoDB</p>
                             <p className='flex items-center gap-2'><Check />Deploy your Node apps to production</p>
-                            {/* Removed the last p tag from the second column to make it 3 */}
                         </div>
                     </div>
                 </div>
@@ -48,7 +51,7 @@ function CourseOverview() {
                     </div>
                 </div>
             </div>
-            <div className='border lg:h-[150px] h-auto lg:w-[730px] w-[90%] mt-6 p-4 text-sm hover:scale-105 transition-transform duration-300 ease-in-out'>
+            <div className='border lg:h-[150px] h-auto lg:w-[90%] w-[90%] mt-6 p-4 text-sm hover:scale-105 transition-transform duration-300 ease-in-out'>
                 <p className='text-xl font-extrabold'>Top companies offer this course to their employees</p>
                 <p className='mt-1'>This course was selected for our collection of top-rated courses trusted by businesses worldwide. <span className='text-violet-800 underline underline-offset-1'>Learn more</span></p>
                 <div className='flex lg:justify-around flex-wrap gap-3 mt-4'>

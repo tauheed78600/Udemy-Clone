@@ -17,7 +17,7 @@ function HomeBelow1() {
 
         {/* Cards Section */}
         <div className="mt-8">
-          <div className="grid gap-3 lg:grid-cols-2 grid-cols-1 lg:w-[88%] md:w-[90%] max-w-full">
+          <div className="grid gap-3 lg:grid-cols-2 grid-cols-1 lg:w-[88%] md:w-[90%] max-w-[95%]">
             {/* Card 1 */}
             <div className="border-2 h-[103px] sm:h-[152px] max-w-full md:full border-black hover:scale-105 transition-transform duration-300 ease-in-out">
               <div className="grid grid-cols-[36%_64%] h-auto">

@@ -107,7 +107,7 @@ function MoreCourses() {
     ));
 
   return (
-    <div className="mt-8">
+    <div className="mt-[80px]">
       <div>
         <p className="font-extrabold text-2xl">
           More Courses by <span className="text-violet-800">Andrew Mead</span>
@@ -137,11 +137,14 @@ function MoreCourses() {
           <div className="flex flex-row gap-4 mt-4">{renderCourses(courses)}</div>
         )}
       </div>
-      <Button className="mb-4 rounded-none w-[90%] hover:bg-slate-300 bg-white border-black text-black">
+      <Button className="mb-4 rounded-none w-full hover:bg-slate-300 bg-white border-black text-black">
         Report Abuse
       </Button>
     </div>
   );
 }
+
+
+
 
 export default MoreCourses;

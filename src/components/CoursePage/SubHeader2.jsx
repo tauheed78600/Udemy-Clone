@@ -4,7 +4,7 @@ import StartRating from './StartRating'
 function SubHeader2() {
     console.log("inside subheader2")
     return (
-        <div className='w-full fixed top-0 h-auto p-2 bg-white text-white'>
+        <div className='w-full fixed top-0 h-auto p-2 bg-black text-white'>
             <div className='flex flex-col ml-4'>
                 <p className=' font-extrabold'>The Complete Node.js Developer Course (3rd Edition)</p>
                 <p className='text-yellow-500 font-extrabold flex items-center text-sm'>

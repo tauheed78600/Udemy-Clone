@@ -1,48 +1,56 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Button } from '../ui/button';
-import { Heart, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import TopicsCard from './TopicsCard';
-import { Link, useNavigate } from 'react-router-dom';
 
 function TopicsSlider({ course1 }) {
     const sliderRef = useRef(null);
+    const [currentStartIndex, setCurrentStartIndex] = useState(0);
+    const [visibleCards, setVisibleCards] = useState(3); // Default number of cards to show
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
 
-    const updateScrollButtons = () => {
-        if (sliderRef.current) {
-            const { scrollLeft, scrollWidth, clientWidth } = sliderRef.current;
-            setCanScrollLeft(scrollLeft > 0);
-            setCanScrollRight(scrollLeft + clientWidth < scrollWidth);
+    // Function to update the number of visible cards based on screen size
+    const updateVisibleCards = () => {
+        const width = window.innerWidth;
+        if (width < 640) {
+            setVisibleCards(2); // Mobile
+        } else if (width < 1024) {
+            setVisibleCards(4); // Tablet
+        } else {
+            setVisibleCards(5); // Desktop
         }
     };
 
+    const updateScrollButtons = () => {
+        setCanScrollLeft(currentStartIndex > 0);
+        setCanScrollRight(currentStartIndex + visibleCards < course1.length);
+    };
+
     const scrollLeft = () => {
-        if (sliderRef.current) {
-            sliderRef.current.scrollBy({ left: -310, behavior: 'smooth' });
+        if (currentStartIndex > 0) {
+            setCurrentStartIndex(prev => Math.max(prev - 1, 0));
         }
     };
 
     const scrollRight = () => {
-        if (sliderRef.current) {
-            sliderRef.current.scrollBy({ left: 310, behavior: 'smooth' });
+        if (currentStartIndex + visibleCards < course1.length) {
+            setCurrentStartIndex(prev => Math.min(prev + 1, course1.length - visibleCards));
         }
     };
 
+    useEffect(() => {
+        updateVisibleCards(); // Set initial visible cards
+        updateScrollButtons(); // Update scroll buttons
+        window.addEventListener('resize', updateVisibleCards); // Update on resize
+
+        return () => {
+            window.removeEventListener('resize', updateVisibleCards); // Cleanup
+        };
+    }, [currentStartIndex]);
 
     useEffect(() => {
-        const slider = sliderRef.current;
-        if (slider) {
-            slider.addEventListener('scroll', updateScrollButtons);
-            updateScrollButtons();
-        }
-        return () => {
-            if (slider) {
-                slider.removeEventListener('scroll', updateScrollButtons);
-            }
-        };
-    }, []);
-    
+        updateScrollButtons(); // Update scroll buttons when visible cards change
+    }, [visibleCards, currentStartIndex]);
 
     return (
         <div className="relative w-full">
@@ -69,10 +77,9 @@ function TopicsSlider({ course1 }) {
 
             <div
                 ref={sliderRef}
-                className="flex overflow-x-auto gap-4 p-4 h-[350px] scrollbar-hidden"
-                
+                className="flex overflow-x-hidden gap-4 p-4 h-[350px] scrollbar-hidden"
             >
-                {course1.map((course, index) => (
+                {course1.slice(currentStartIndex, currentStartIndex + visibleCards).map((course, index) => (
                     <TopicsCard key={index} course={course} />
                 ))}
             </div>
@@ -81,4 +88,3 @@ function TopicsSlider({ course1 }) {
 }
 
 export default TopicsSlider;
-

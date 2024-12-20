@@ -89,17 +89,17 @@ function CourseContent() {
     }
 
     return (
-        <div className=''>
+        <div className='w-full'>
             <Popup />
             {subHeader ? <SubHeader2 /> : null}
             <div
-                className="w-[350px] md:w-[750px] lg:w-auto h-auto lg:h-[375px] lg:bg-black text-black lg:text-white"
+                className="w-[90%] md:w-[100%] lg:w-auto h-auto lg:h-[375px] lg:bg-black text-black lg:text-white"
                 ref={blackDivRef}
             >
                 {/* Mobile UI */}
                 <div className='lg:hidden '>
-                    <div className='mt-4 flex justify-start ml-4 flex-col'>
-                        <p className='text-sm lg:text-violet-300 text-violet-700 font-extrabold'>Development &gt; Programming Languages &gt; Nodejs</p>
+                    <div className='mt-4 flex justify-start ml-4 md:w-[90%] flex-col flex-wrap'>
+                        <p className='w-[90%] text-sm lg:text-violet-300 text-violet-700 font-extrabold'>Development &gt; Programming Languages &gt; Nodejs</p>
                         <div
                             className="relative mt-4 h-full"
                             onClick={handlePopup}
@@ -107,7 +107,7 @@ function CourseContent() {
                             <img
                                 src="mern.png"
                                 alt="Image description"
-                                className="w-full h-full object-cover"
+                                className="w-[99%] h-full object-cover"
                             />
                             <div className="absolute inset-0 flex items-center justify-center w-full">
                                 <div className="p-5 shadow-2xl bg-white rounded-full">
@@ -115,7 +115,7 @@ function CourseContent() {
                                 </div>
                             </div>
                         </div>
-                        <div className='w-full'>
+                        <div className='w-[99%]'>
                             <p className='text-3xl mt-6 font-extrabold'>The Complete Node.js Developer Course (3rd Edition)</p>
                             <p className='mt-5'>Learn Node.js by building real-world applications with Node JS, Express, MongoDB, Jest, and more!</p>
                             <p className='bg-yellow-300 w-[80px]'>Bestseller</p>
@@ -163,7 +163,7 @@ function CourseContent() {
                                     <p className="mt-2 font-extrabold">The Complete Node.js Developer Course (3rd Edition)</p>
                                     <div className='border border-white h-auto bg-gray-600'>
                                         <iframe
-                                            className='h-[250px] md:w-full w-[330px]'
+                                            className='h-[250px] md:w-full w-[100%]'
                                             src={`https://www.youtube.com/embed/${youtubeId}`}
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
@@ -173,14 +173,16 @@ function CourseContent() {
                                             <p>Free Sample Videos</p>
                                         </div>
                                         {youtubeIds.map((youtube, idx) => (
-                                            <div onClick={() => setYoutubeId(youtube.youtubeId)} className="border h-[80px] w-[300px] border-gray-600 hover:bg-gray-950 flex flex-col gap-3 ml-3">
-                                                <div className="flex flex-row w-[330px]">
+                                            <div onClick={() => setYoutubeId(youtube.youtubeId)} className="border h-auto w-[90%] border-gray-600 hover:bg-gray-950 flex flex-col gap-3 ml-3">
+                                                <div className="flex flex-row w-[100%]">
                                                     <img src='reactRedux.png' className="h-[80px]"></img>
+                                                    <div className='fex justify-between'>
                                                     <div>
                                                         <p className="font-extrabold ml-2">{youtube.name}</p>
                                                     </div>
                                                     <div className="">
                                                         <p className="flex justify-end text-sm font-extrabold">{youtube.duration}</p>
+                                                    </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -191,13 +193,10 @@ function CourseContent() {
                             </div>
                         </div>
                     )}
-
-
-
                 </div>
 
                 {/*Laptop UI */}
-                <div className='hidden lg:grid grid-cols-[60%_40%] gap-24 h-auto lg:ml-[200px] lg:w-[1200px] p-3'>
+                <div className='hidden lg:grid grid-cols-[60%_40%] gap-20 lg:gap-10 h-auto lg:mx-auto lg:max-w-[90%] lg:ml-[100px] p-3'>
                     <div className='mt-7 h-[400px]'>
                         <p className='text-sm lg:text-violet-300 text-violet-700 font-extrabold'>Development &gt; Programming Languages &gt; Nodejs</p>
                         <p className='text-3xl mt-6 font-extrabold'>The Complete Node.js Developer Course (3rd Edition)</p>
@@ -227,7 +226,7 @@ function CourseContent() {
 
                     {showCard && isSticky ?
                         <div>
-                            <div className='h-[60px] fixed left-[1011px] top-[4px] w-[350px] bg-white z-10 text-black border'>
+                            <div className='h-[60px] fixed lg:top-4 top-2 w-full max-w-[350px] bg-white z-10 text-black border'>
                                 <div className='flex justify-around font-extrabold mt-4'>
                                     <div>
                                         <p onClick={() => setToggle(true)}>Personal</p>
