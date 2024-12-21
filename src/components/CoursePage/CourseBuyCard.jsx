@@ -86,7 +86,7 @@ function CourseBuyCard() {
           <span className="font-bold">1 day </span>left at this price!
         </p>
         <div className="mt-3 flex items-center gap-3">
-          <Button className="rounded-none hover:scale-105 transition-transform duration-300 ease-in-out  w-[240px] h-[50px] bg-violet-600 hover:bg-violet-800">
+          <Button className="rounded-none lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out  w-[240px] h-[50px] bg-violet-600 hover:bg-violet-800">
             Add to Cart
           </Button>
           <div className="border border-black h-[50px] w-[55px] p-3 hover:scale-110 transition-transform duration-300 ease-in-out ">
@@ -133,7 +133,7 @@ function CourseBuyCard() {
               Learn more
             </span>
           </p>
-          <Button className="bg-white rounded-none hover:bg-gray-200 mt-2 text-black border-black w-[295px] h-[55px] font-extrabold hover:scale-105 transition-transform duration-300 ease-in-out ">
+          <Button className="bg-white rounded-none hover:bg-gray-200 mt-2 text-black border-black w-[295px] h-[55px] font-extrabold lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out ">
             Start Subscription
           </Button>
           <div className="flex flex-col items-center">

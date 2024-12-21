@@ -15,10 +15,14 @@ function UserReview() {
                         <div className='h-12 w-12 border bg-black text-white p-3 rounded-full'>
                             <p className='font-semibold'>AR</p>
                         </div>
-                        <div className="flex flex-col w-[400px]">
+                        <div className="flex flex-col w-[90%]">
                             <div className="flex items-center justify-between">
-                                <p className="font-extrabold ml-2">Ali. R</p>
-                                <EllipsisVertical />
+                                <div>
+                                    <p className="font-extrabold ml-2">Ali. R</p>
+                                </div>
+                                <div>
+                                    <EllipsisVertical />
+                                </div>
                             </div>
                             <div className="flex items-center gap-2">
                                 <StartRating />
@@ -31,22 +35,22 @@ function UserReview() {
                         </p>
                     </div>
                     <div className='flex gap-2'>
-                    <div className='mt-4 text-xs text-gray-700'>
-                        <p>Helpful?</p>
-                    </div>
-                    <div className='flex gap-2 mt-3'>
+                        <div className='mt-4 text-xs text-gray-700'>
+                            <p>Helpful?</p>
+                        </div>
+                        <div className='flex gap-2 mt-3'>
                             <ThumbsUp className='ml-1 h-5' />
 
                             <ThumbsDown className='ml-1 mt-1 h-5' />
-                    </div>
+                        </div>
                     </div>
                 </div>
                 <div className='border  border-t-black border-b-black border-white mb-4 p-3'>
-                <div className='flex'>
+                    <div className='flex'>
                         <div className='h-12 w-12 border bg-black text-white p-3 rounded-full'>
                             <p className='font-semibold'>KO</p>
                         </div>
-                        <div className="flex flex-col w-[400px]">
+                        <div className="flex flex-col w-[90%]">
                             <div className="flex items-center justify-between">
                                 <p className="font-extrabold ml-2">Karen O.</p>
                                 <EllipsisVertical />
@@ -61,14 +65,14 @@ function UserReview() {
                         <p>Andrew does a great job of explaining the concepts and providing the fundamental knowledge about the software in use in each section. The course is well structured and easy to understand and follow.</p>
                     </div>
                     <div className='flex gap-2'>
-                    <div className='mt-4 text-xs text-gray-700'>
-                        <p>Helpful?</p>
-                    </div>
-                    <div className='flex gap-2 mt-3'>
+                        <div className='mt-4 text-xs text-gray-700'>
+                            <p>Helpful?</p>
+                        </div>
+                        <div className='flex gap-2 mt-3'>
                             <ThumbsUp className='ml-1 h-5' />
 
                             <ThumbsDown className='ml-1 mt-1 h-5' />
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,22 +98,22 @@ function UserReview() {
                         </p>
                     </div>
                     <div className='flex gap-2'>
-                    <div className='mt-4 text-xs text-gray-700'>
-                        <p>Helpful?</p>
-                    </div>
-                    <div className='flex gap-2 mt-3'>
+                        <div className='mt-4 text-xs text-gray-700'>
+                            <p>Helpful?</p>
+                        </div>
+                        <div className='flex gap-2 mt-3'>
                             <ThumbsUp className='ml-1 h-5' />
 
                             <ThumbsDown className='ml-1 mt-1 h-5' />
-                    </div>
+                        </div>
                     </div>
                 </div>
                 <div className='border border-t-black border-b-black border-white mb-4 p-3'>
-                <div className='flex'>
+                    <div className='flex'>
                         <div className='h-12 w-14 border bg-black text-white p-3 rounded-full'>
                             <p className='font-semibold ml-1'>TI</p>
                         </div>
-                        <div className="flex flex-col w-[400px]">
+                        <div className="flex flex-col w-[90%]">
                             <div className="flex items-center justify-between">
                                 <p className="font-extrabold ml-2">Tyler I.</p>
                                 <EllipsisVertical />
@@ -124,14 +128,14 @@ function UserReview() {
                         <p>Andrew has been a great resource in learning NodeJS and the aspects needed to create some pretty fun projects. His teaching style is easy and fun and keeps me engaged all the time.</p>
                     </div>
                     <div className='flex gap-2'>
-                    <div className='mt-4 text-xs text-gray-700'>
-                        <p>Helpful?</p>
-                    </div>
-                    <div className='flex gap-2 mt-3'>
+                        <div className='mt-4 text-xs text-gray-700'>
+                            <p>Helpful?</p>
+                        </div>
+                        <div className='flex gap-2 mt-3'>
                             <ThumbsUp className='ml-1 h-5' />
 
                             <ThumbsDown className='ml-1 mt-1 h-5' />
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>

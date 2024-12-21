@@ -6,11 +6,11 @@ import ContentCourse from './ContentCourse'
 function CourseOverview() {
     return (
         <div
-        className={`ml-6 w-[90%] ${
+        className={`ml-6 md:ml-12 w-[90%] ${
           window.innerWidth >= 1024 ? 'lg:ml-[200px] lg:w-[730px]' : 'lg:w-full'
         }`}
       >      
-            <div className='border-2 lg:w-[90%] mt-8 px-4 hover:scale-105 transition-transform duration-300 ease-in-out'>
+            <div className='border-2 lg:w-[90%] mt-8 px-4 lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out'>
                 <div className="lg:h-[215px] lg:flex lg:items-center lg:justify-between flex flex-col items-center">
                     <p className='text-2xl font-extrabold w-full text-center lg:w-72 lg:text-left mb-4 lg:mb-0'>What You'll Learn</p> 
                     <div className='flex flex-col lg:flex-row lg:gap-20 md:w-auto md:flex-col w-full lg:w-auto'>
@@ -38,7 +38,7 @@ function CourseOverview() {
             </div>
             <div className='mt-6 font-extrabold text-xl'>
                 <p>This Course Includes</p>
-                <div className='grid grid-cols-2 lg:w-[650px] w-[350px] gap-5'>
+                <div className='grid grid-cols-2 lg:w-[650px] w-[90%] gap-5'>
                     <div className='text-sm font-semibold mt-3 flex flex-col gap-4'>
                         <p className='flex justify-start gap-4 hover:scale-110 transition-transform duration-300 ease-in-out'><SquarePlay />35 Hours on-demand video</p>
                         <p className='flex justify-start gap-4 hover:scale-110 transition-transform duration-300 ease-in-out'><Download />143 Downloadable resources</p>
@@ -51,7 +51,7 @@ function CourseOverview() {
                     </div>
                 </div>
             </div>
-            <div className='border lg:h-[150px] h-auto lg:w-[90%] w-[90%] mt-6 p-4 text-sm hover:scale-105 transition-transform duration-300 ease-in-out'>
+            <div className='border lg:h-[150px] h-auto lg:w-[90%] w-[90%] mt-6 p-4 text-sm lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out'>
                 <p className='text-xl font-extrabold'>Top companies offer this course to their employees</p>
                 <p className='mt-1'>This course was selected for our collection of top-rated courses trusted by businesses worldwide. <span className='text-violet-800 underline underline-offset-1'>Learn more</span></p>
                 <div className='flex lg:justify-around flex-wrap gap-3 mt-4'>

@@ -57,7 +57,7 @@ function ContentCourse() {
                     {courseSections.map((sect, idx) => (
                         <div key={idx}>
                             <div
-                                className="hover:scale-105 transition-transform duration-300 ease-in-out p-3 border-b text-sm bg-gray-100 cursor-pointer font-bold flex justify-start gap-4 items-center"
+                                className="lg:hover:scale-105 lg:transition-transform duration-300 lg:ease-in-out p-3 border-b text-sm bg-gray-100 cursor-pointer font-bold flex justify-start gap-4 items-center"
                                 onClick={() => toggleSection(idx)}
                             >
                                 <span>{openSections.includes(idx) ? <ChevronUp className='h-3' /> : <ChevronDown className='h-3' />}</span>

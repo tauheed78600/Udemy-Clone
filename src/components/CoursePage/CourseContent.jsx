@@ -93,12 +93,12 @@ function CourseContent() {
             <Popup />
             {subHeader ? <SubHeader2 /> : null}
             <div
-                className="w-[90%] md:w-[100%] lg:w-auto h-auto lg:h-[375px] lg:bg-black text-black lg:text-white"
+                className="w-[95%] md:w-[100%] lg:w-auto h-auto lg:h-[375px] lg:bg-black text-black lg:text-white"
                 ref={blackDivRef}
             >
                 {/* Mobile UI */}
                 <div className='lg:hidden '>
-                    <div className='mt-4 flex justify-start ml-4 md:w-[90%] flex-col flex-wrap'>
+                    <div className='mt-4 flex justify-start md:ml-12 ml-4 md:w-[90%] flex-col flex-wrap'>
                         <p className='w-[90%] text-sm lg:text-violet-300 text-violet-700 font-extrabold'>Development &gt; Programming Languages &gt; Nodejs</p>
                         <div
                             className="relative mt-4 h-full"
@@ -154,7 +154,7 @@ function CourseContent() {
                             >
                                 <div className="flex justify-end">
                                     <Button
-                                        className='bg-black h-7 text-white font-extrabold '
+                                        className='bg-black h-7 text-white font-extrabold'
                                         onClick={handlePopup}
                                     >X</Button>
                                 </div>
@@ -176,7 +176,7 @@ function CourseContent() {
                                             <div onClick={() => setYoutubeId(youtube.youtubeId)} className="border h-auto w-[90%] border-gray-600 hover:bg-gray-950 flex flex-col gap-3 ml-3">
                                                 <div className="flex flex-row w-[100%]">
                                                     <img src='reactRedux.png' className="h-[80px]"></img>
-                                                    <div className='fex justify-between'>
+                                                    <div className='flex justify-between'>
                                                     <div>
                                                         <p className="font-extrabold ml-2">{youtube.name}</p>
                                                     </div>
@@ -245,7 +245,7 @@ function CourseContent() {
                                             <p className='text-red-600 flex items-center gap-1 text-sm'><AlarmClock className='h-5' /><span className='font-bold'>1 day </span>left at this price!</p>
                                         </div>
                                         <div className='mt-3 flex items-center gap-3'>
-                                            <Button className='rounded-none hover:scale-105 transition-transform duration-300 ease-in-out  w-[240px] h-[50px] bg-violet-600 hover:bg-violet-800'>Add to Cart</Button>
+                                            <Button className='rounded-none lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out  w-[240px] h-[50px] bg-violet-600 hover:bg-violet-800'>Add to Cart</Button>
                                             <div className='border border-black h-[50px] w-[55px] hover:scale-110 transition-transform duration-300 ease-in-out  p-3'>
                                                 <Heart className='h-7' />
                                             </div>
@@ -275,7 +275,7 @@ function CourseContent() {
                                         <div className=''>
                                             <p className='mt-2 font-bold text-xl'>Subscribe to Udemy’s top courses</p>
                                             <p className='text-sm mt-2'>Get this course, plus 12,000+ of our top-rated courses, with Personal Plan.<span className='text-sm ml-2 text-violet-800 font-extrabold underline underline-offset-1'>Learn more</span></p>
-                                            <Button className='bg-white hover:scale-105 transition-transform duration-300 ease-in-out  rounded-none hover:bg-gray-200 mt-2 text-black border-black w-[295px] h-[55px] font-extrabold'>Start Subscription</Button>
+                                            <Button className='bg-white lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out rounded-none hover:bg-gray-200 mt-2 text-black border-black w-[295px] h-[55px] font-extrabold'>Start Subscription</Button>
                                             <div className='flex flex-col items-center'>
                                                 <p className='text-xs mt-2'>Starting at ₹850 per month</p>
                                                 <p className='text-xs mt-1'>Cancel Anytime</p>

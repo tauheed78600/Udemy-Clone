@@ -10,7 +10,7 @@ function FrequentlyBought() {
                 <div className=''>
                     <p className='text-2xl font-extrabold'>Frequently Bought Together</p>
                     <div className='flex flex-col justify-center'>
-                        <div className='lg:w-[680px] w-[90%] h-auto mt-3 flex hover:scale-105 transition-transform duration-300 ease-in-out '>
+                        <div className='lg:w-[680px] w-[90%] h-auto mt-3 flex lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out '>
                             <img src='mern.png' className='lg:w-[200px] w-[50%] h-[120px]'></img>
 
                             <div className='ml-3 grid grid-cols-[70%_30%] mt-2 '>
@@ -26,7 +26,7 @@ function FrequentlyBought() {
                             </div>
 
                         </div>
-                        <div className='w-[90%] h-auto mt-3 flex hover:scale-105 transition-transform duration-300 ease-in-out '>
+                        <div className='w-[90%] h-auto mt-3 flex lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out '>
                             <img src='mern.png' className='lg:w-[200px] w-[50%] h-[120px]'></img>
                             <div className='ml-3 grid grid-cols-[70%_30%] mt-2 '>
                                 <div>
@@ -41,7 +41,7 @@ function FrequentlyBought() {
                             </div>
                         </div>
                         <div className='flex justify-between'>
-                            <p className='font-extrabold mt-4'>Total ₹10,997/-</p>
+                            <p className='font-extrabold lg:mt-4'>Total ₹10,997/-</p>
                             <Button className='rounded-none bg-violet-800 text-white w-[150px] h-[50px] font-extrabold'>Add All to Cart</Button>
                         </div>
                     </div>
