@@ -5,19 +5,18 @@ import TopicsCard from './TopicsCard';
 function TopicsSlider({ course1 }) {
     const sliderRef = useRef(null);
     const [currentStartIndex, setCurrentStartIndex] = useState(0);
-    const [visibleCards, setVisibleCards] = useState(3); // Default number of cards to show
+    const [visibleCards, setVisibleCards] = useState(3);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(true);
 
-    // Function to update the number of visible cards based on screen size
     const updateVisibleCards = () => {
         const width = window.innerWidth;
         if (width < 640) {
-            setVisibleCards(2); // Mobile
+            setVisibleCards(2);
         } else if (width < 1024) {
-            setVisibleCards(4); // Tablet
+            setVisibleCards(4);
         } else {
-            setVisibleCards(5); // Desktop
+            setVisibleCards(5);
         }
     };
 
@@ -39,21 +38,21 @@ function TopicsSlider({ course1 }) {
     };
 
     useEffect(() => {
-        updateVisibleCards(); // Set initial visible cards
-        updateScrollButtons(); // Update scroll buttons
-        window.addEventListener('resize', updateVisibleCards); // Update on resize
+        updateVisibleCards();
+        updateScrollButtons();
+        window.addEventListener('resize', updateVisibleCards);
 
         return () => {
-            window.removeEventListener('resize', updateVisibleCards); // Cleanup
+            window.removeEventListener('resize', updateVisibleCards);
         };
     }, [currentStartIndex]);
 
     useEffect(() => {
-        updateScrollButtons(); // Update scroll buttons when visible cards change
+        updateScrollButtons();
     }, [visibleCards, currentStartIndex]);
 
     return (
-        <div className="relative w-full">
+        <div className="relative w-[95%]">
             {canScrollLeft && (
                 <div className="absolute top-1/2 left-2 transform -translate-y-1/2 z-10">
                     <button

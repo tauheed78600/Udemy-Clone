@@ -107,8 +107,8 @@ function MoreCourses() {
     ));
 
   return (
-    <div className="mt-[80px]">
-      <div>
+    <div className="mt-4">
+      <div className='z-50'>
         <p className="font-extrabold text-2xl">
           More Courses by <span className="text-violet-800">Andrew Mead</span>
         </p>

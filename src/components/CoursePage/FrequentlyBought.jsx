@@ -11,23 +11,23 @@ function FrequentlyBought() {
                     <p className='text-2xl font-extrabold'>Frequently Bought Together</p>
                     <div className='flex flex-col justify-center'>
                         <div className='lg:w-[680px] w-[90%] h-auto mt-3 flex lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out '>
-                            <img src='mern.png' className='lg:w-[200px] w-[50%] h-[120px]'></img>
+                            <img src='mern.png' className='lg:w-[200px] w-[50%] h-[120px] object-cover'></img>
 
                             <div className='ml-3 grid grid-cols-[70%_30%] mt-2 '>
                                 <div>
                                     <p className='font-extrabold text-sm'>The Complete Node.js Developer Course (3rd Edition)</p>
                                     <p className='text-xs text-gray-700'>Andrew Mead, Rob Percival</p>
                                     <p className='flex text-sm'>4.6<StartRating className='mt-4' /></p>
-                                    <p className='font-extrabold lg:hidden'>₹3999</p> {/* Visible only on mobiles and tablets */}
+                                    <p className='font-extrabold lg:hidden'>₹3999</p>
                                 </div>
                                 <div className='flex justify-end md:block'>
-                                    <p className='font-extrabold ml-7 hidden lg:block'>₹3999</p> {/* Visible only on laptops */}
+                                    <p className='font-extrabold ml-7 hidden lg:block'>₹3999</p>
                                 </div>
                             </div>
 
                         </div>
                         <div className='w-[90%] h-auto mt-3 flex lg:hover:scale-105 lg:transition-transform lg:duration-300 lg:ease-in-out '>
-                            <img src='mern.png' className='lg:w-[200px] w-[50%] h-[120px]'></img>
+                            <img src='mern.png' className='lg:w-[200px] w-[50%] h-[120px] object-cover'></img>
                             <div className='ml-3 grid grid-cols-[70%_30%] mt-2 '>
                                 <div>
                                     <p className='font-extrabold text-sm'>The Complete Node.js Developer Course (3rd Edition)</p>
@@ -41,7 +41,7 @@ function FrequentlyBought() {
                             </div>
                         </div>
                         <div className='flex justify-between'>
-                            <p className='font-extrabold lg:mt-4'>Total ₹10,997/-</p>
+                            <p className='font-extrabold md:mt-4 lg:mt-4'>Total ₹10,997/-</p>
                             <Button className='rounded-none bg-violet-800 text-white w-[150px] h-[50px] font-extrabold'>Add All to Cart</Button>
                         </div>
                     </div>
